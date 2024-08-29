@@ -10,8 +10,8 @@ using PdfSharpCore.Fonts;
 
 using static PDFGenerator.Constants.FontConstant;
 using PDFGenerator.Domains;
- using PdfSharpCore.Fonts;
-
+using PdfSharpCore.Fonts;
+using PDFGenerator.Helpers;
 
 class Program
 {
@@ -19,7 +19,7 @@ class Program
     {
         
         // This should be part of your initialization code
-        GlobalFontSettings.FontResolver = (IFontResolver)CustomFontResolver.Instance;
+        GlobalFontSettings.FontResolver = CalibriFontResolver.Instance;
         string filePath = "data/de.json";
          Root data = JsonReader.ReadJsonFromFile(filePath);
 

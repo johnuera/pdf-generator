@@ -1,51 +1,55 @@
 using PdfSharpCore.Fonts;
 using System.IO;
 using System.Reflection;
-
-public class CustomFontResolver : IFontResolver
+namespace PDFGenerator.Helpers
 {
-    public static readonly CustomFontResolver Instance = new CustomFontResolver();
-
-    public byte[] GetFont(string faceName)
+    public class CustomFontResolver : IFontResolver
     {
-        switch (faceName)
+        public static readonly CustomFontResolver Instance = new CustomFontResolver();
+    // Implement the DefaultFontName property
+        public string DefaultFontName => "Calibri";
+        public byte[] GetFont(string faceName)
         {
-            case "Calibri#":
-                return LoadFontData("PDFGenerator.Fonts.calibri.ttf");
-            case "Calibri-Bold#":
-                return LoadFontData("PDFGenerator.Fonts.calibri.ttf");
-            // Add other cases as necessary for bold, italic, etc.
-        }
-
-        return null;
-    }
-
-    public FontResolverInfo ResolveTypeface(string familyName, bool isBold, bool isItalic)
-    {
-        if (familyName == "Calibri")
-        {
-            if (isBold)
+            switch (faceName)
             {
-                return new FontResolverInfo("Calibri-Bold#");
+                case "Calibri#":
+                    return LoadFontData("PDFGenerator.Fonts.vista.calibri.ttf");
+                case "Calibri-Bold#":
+                    return LoadFontData("PDFGenerator.Fonts.vista.calibrib.ttf");
+                // Add other cases as necessary for bold, italic, etc.
             }
 
-            return new FontResolverInfo("Calibri#");
+            return null;
         }
 
-        // Fallback to some other default font
-        return PlatformFontResolver.ResolveTypeface(familyName, isBold, isItalic);
-    }
-
-    private static byte[] LoadFontData(string resourceName)
-    {
-        using (var stream = typeof(CustomFontResolver).Assembly.GetManifestResourceStream(resourceName))
+        public FontResolverInfo ResolveTypeface(string familyName, bool isBold, bool isItalic)
         {
-            if (stream == null)
-                throw new InvalidOperationException($"Resource '{resourceName}' not found.");
-            
-            byte[] data = new byte[stream.Length];
-            stream.Read(data, 0, (int)stream.Length);
-            return data;
+            Console.WriteLine(familyName);
+            if (familyName == "Calibri")
+            {
+                if (isBold)
+                {
+                    return new FontResolverInfo("Calibri-Bold#");
+                }
+
+                return new FontResolverInfo("Calibri#");
+            }
+
+            // Fallback to some other default font
+            return PlatformFontResolver.ResolveTypeface(familyName, isBold, isItalic);
+        }
+
+        private static byte[] LoadFontData(string resourceName)
+        {
+            using (var stream = typeof(CustomFontResolver).Assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream == null)
+                    throw new InvalidOperationException($"Resource '{resourceName}' not found.");
+                
+                byte[] data = new byte[stream.Length];
+                stream.Read(data, 0, (int)stream.Length);
+                return data;
+            }
         }
     }
 }
