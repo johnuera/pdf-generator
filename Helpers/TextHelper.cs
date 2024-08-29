@@ -10,7 +10,7 @@ namespace PDFGenerator.Helpers
     
    
 
-        public static void DrawTextLines(XGraphics gfx, string[] lines, double x, ref double y, XFont font)
+        public static void DrawTextLines(XGraphics gfx, string[] lines, double x,   double y, XFont font)
     {
         foreach (var line in lines)
         {

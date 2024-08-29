@@ -4,6 +4,7 @@ using static PDFGenerator.Constants.FontConstant;
 
 using static PDFGenerator.Helpers.TextHelper;
 using static PDFGenerator.Helpers.TableHelper;
+using PDFGenerator.Domains;
 
 namespace PDFGenerator.Services
 {
@@ -12,12 +13,12 @@ namespace PDFGenerator.Services
     public static void AddOrderDetails(XGraphics gfx, double xPosition)
     {
         double yPosition = 240;
-        DrawTextLines(gfx, OrderDetails, xPosition, ref yPosition, DefaultFont);
+        DrawTextLines(gfx, OrderDetails, xPosition,   yPosition, DefaultFont);
     }
 
-    public static void AddOrderHeader(XGraphics gfx)
+    public static void AddOrderHeader(XGraphics gfx,Root data)
     {
-        gfx.DrawString(DeliveryNote, DefaultFontHeader, XBrushes.Black, 50, 300);
+        gfx.DrawString(data.General.InvoiceHeadline, DefaultFontHeader, XBrushes.Black, 50, 300);
     }
 
     public static void AddOrderItems(XGraphics gfx)

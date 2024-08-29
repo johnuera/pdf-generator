@@ -5,8 +5,9 @@ namespace PDFGenerator.Constants
     public static class PdfConstant
     {
         // Constants for file paths and fonts
-        public const string LogoPath = "kilagoo-logo.png";
- 
+        
+        public const string FolderPath = "../../../../mnt/c/fuljoyment/invoices/";
+
 
         // Customer details
         public static readonly string[] CustomerDetails =

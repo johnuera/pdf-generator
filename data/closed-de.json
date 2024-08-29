@@ -1,0 +1,87 @@
+{
+    "general": {
+      "client": 21,
+      "language": "de",
+      "invoiceHeadline": "Rechnung",
+      "packingListHeadline": "Lieferschein",
+      "clientName": "closed",
+      "clientStreet": "",
+      "clientCity": "",
+      "clientTel": "",
+      "clientMail": "",
+      "clientUrl": ""
+    },
+    "articleTable": {
+      "headerPos": "Pos",
+      "headerNo": "Artikelnummer",
+      "headerImage": "Artikel",
+      "headerDescription": "Bezeichnung",
+      "headerColor": "Farbe",
+      "headerSize": "Grösse",
+      "headerQuantity": "Menge",
+      "headerPrice": "Preis",
+      "headerTotal": "Summe",
+      "headerReasonForReturn": "Retourengrund",
+      "headerChange": "Umtausch",
+      "headerNewSize": "Neue Größe"
+    },
+    "invoiceDetails": {
+      "valueOfGoods": "Zwischensumme",
+      "shippingCosts": "Versandkosten",
+      "paymentCosts": "Bitte Überweisen sie den Betrag auf folgendes Konto:",
+      "giftWrapCosts": "Geschenkverpackung",
+      "discount": "Rabatt",
+      "discountName": "Gutschein",
+      "total": "Gesamtsumme",
+      "VAT": "MwSt.",
+      "from": "aus",
+      "netTotal": "Nettosumme",
+      "thankYou": "Vielen Dank für Ihre Bestellung!"
+    },
+    "paymentText": {
+      "method": "Zahlungsart:",
+      "hintInvoice": "Bitte Überweisen sie den Betrag innerhalb von 14 Tagen auf folgendes Konto:--Kienast Schuhhandels GmbH & Co. KG",
+      "hintCreditCard": "Wir haben den Rechnungsbetrag Ihrem Kreditkarten-Konto belastet.",
+      "hintPrepayment": "Vielen Dank für Ihre Bestellung! Ihre Zahlung ist auf unserem Konto eingetroffen.",
+      "hintPaypal": "Wir haben den Rechnungsbetrag Ihrem PayPal-Konto belastet.",
+      "hintCOD": "Sie haben die Ware bei Empfang des Paketes bezahlt.",
+      "hintIdeal": "Wir haben den Rechnungsbetrag Ihrem iDeal-Konto belastet.",
+      "hintSofortueberweisung": "Wir haben den Rechnungsbetrag Ihrem Bankkonto belastet.",
+      "hintPayOne": "Bitte überweise den Rechnungsbetrag anhand der Zahlungsinformationen, die du von PayOne erhalten hast.--kilagoo.com hat die fällige Kaufpreisforderung aus deiner Bestellung, einschließlich etwaiger Nebenforderungen, an die PayOne GmbH abgetreten. Forderungsinhaber ist damit die PayOne GmbH. Eine schuldbefreiende Leistung ist durch dich nur an die PayOne GmbH möglich. Es gelten die zusätzlichen Allgemeinen Geschäftsbedingungen und der Datenschutzhinweis der PayOne GmbH: www.payone.com/agb.--Die Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.",
+      "returnHint": "Du möchtest deine Produkte zurückgeben?",
+      "returnText": "Bitte verwende für die Anmeldung deiner Retoure das Retourenportal und gib dort deine Bestellnummer und die bei der Bestellung verwendete Mailadresse an."
+    },
+    "returnText": {
+      "receiptHeadline": "Retouren",
+      "receiptOrderNo": "Bestellnummer:",
+      "receiptOrderDate": "Bestelldatum:",
+      "reasons": "Retourengründe",
+      "reason1": "Artikel zu groß",
+      "reason2": "Artikel zu klein",
+      "reason3": "Mehrere Größen bestellt",
+      "reason4": "Passform gefällt nicht",
+      "reason5": "Artikel gefällt nicht",
+      "reason6": "Artikel nicht wie abgebildet",
+      "reason7": "Artikel beschädigt",
+      "reason8": "Falscher Artikel geliefert",
+      "reason9": "Verspätete Lieferung",
+      "noExchange": "Es war nicht das passende Teil oder die passende Größe dabei? Gib deine neue Bestellung jetzt unter www.example.com auf.",
+      "hint1": "Wie gebe ich einen Artikel zurück?--Du kannst innerhalb von 30 Tagen ungetragene Artikel in der Original-Verpackung wie folgt an uns zurücksenden:",
+      "hint2": "1) leg bitte diesen Retourenschein in das Paket--2) logge dich bei deinem Kundenkonto auf www.example.com ein--3) wähle den Menüpunkt 'Bestellungen' und führe die Aktion 'Rücksendung' für deine gewünschte Bestellung aus--4) folge den weiteren Anweisungen, um einen Artikel kostenfrei an uns zurückzuschicken",
+      "hint3": "Bei Fragen erreichst du uns jederzeit unter kontakt@example.com oder telefonisch unter: 01234 567890--(Mo - Fr 9:00 - 18:00 Uhr)"
+    },
+    "footer": {
+      "greeting": "Liebe Grüße",
+      "signature": "dein Team",
+      "line1": "Firma XYZ",
+      "line11": "Straße 1--12345 Stadt--Amtsgericht XYZ--USt-IdNr.: DE123456789",
+      "line2": "Bankverbindung",
+      "line21": "Bank Name--IBAN: DE12 3456 7890 1234 5678 90--BIC: BANKDEFFXXX",
+      "line22": "Bank Name 2--IBAN: DE98 7654 3210 9876 5432 10--BIC: BANKDEFFXXX",
+      "line3": "Persönlich haftende Gesellschafterin:",
+      "line31": "Verwaltungs GmbH--Amtsgericht XYZ HRB 123456--Geschäftsführer: Max Mustermann",
+      "line5": "Seite",
+      "line6": "Fortsetzung auf der nächsten Seite"
+    }
+  }
+  
