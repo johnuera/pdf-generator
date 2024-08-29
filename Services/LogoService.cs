@@ -10,7 +10,7 @@ namespace PDFGenerator.Services
             var imagePath = $"{FolderPath}{data.General.ClientName}/logo-{data.General.ClientName}.png";
             var image = XImage.FromFile(imagePath);
             double xPosition = gfx.PageSize.Width - image.PixelWidth;
-            gfx.DrawImage(image, xPosition, 20);
+            gfx.DrawImage(image, xPosition, 40);
             return xPosition;
         }
 

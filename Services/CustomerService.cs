@@ -9,7 +9,7 @@ namespace PDFGenerator.Services
     
     public static void AddCustomerDetails(XGraphics gfx)
     {
-        DrawTextLines(gfx, CustomerDetails, 50,  170, DefaultFont);
+        DrawTextLines(gfx, CustomerDetails, 50,  150, DefaultFont);
     }
 
      
