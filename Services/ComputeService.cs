@@ -31,8 +31,8 @@ namespace PDFGenerator.Services
     string totalPriceStr = $"{totalPrice.ToString("F2", de)} €";
     string shippingCostStr = "0,00 €";
     string netAmountStr = $"{(totalPrice - tax).ToString("F2", de)} €";
-    string taxAmountStr = $"{(tax).ToString("F2", de)} €";
-    string totalAmountStr = $"{(totalPrice - tax).ToString("F2", de)} €";
+    string taxAmountStr = $"{tax.ToString("F2", de)} €";
+    string totalAmountStr = $"{totalPrice.ToString("F2", de)} €";
 
     // Draw labels and values with right alignment
     DrawRightAlignedText(gfx, MessageDefaultFont, subtotalText, totalPriceStr, rightMargin, orderItemsYPosition + 30, logoXPosition);

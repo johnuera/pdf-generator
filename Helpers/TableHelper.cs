@@ -26,8 +26,15 @@ namespace PDFGenerator.Helpers
                 }
                 else
                 {
+                    var location = XStringFormats.TopLeft;
+                    if(i>2){
+                        location = XStringFormats.TopCenter;
+                    }
+                    if(i>4){
+                        location = XStringFormats.TopRight;
+                    }
                     // Default drawing for other cells
-                    gfx.DrawString(row[i], font, XBrushes.Black, cellRect, XStringFormats.TopCenter);
+                    gfx.DrawString(row[i], font, XBrushes.Black, cellRect, location);
 
                     //if (isHeader || (i == row.Length - 1 && isLastItem))
                     if (isHeader ||  isLastItem)
