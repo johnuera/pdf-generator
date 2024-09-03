@@ -1,7 +1,5 @@
-using System.ComponentModel.Design.Serialization;
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
-using PDFGenerator.Domains;
 
 namespace PDFGenerator.Helpers
 {
@@ -24,17 +22,22 @@ namespace PDFGenerator.Helpers
                 else if (i == 2 && !isHeader)
                 {
                     // Special case for the cell at index 3
-                    DrawItemImage(gfx,   cellX, y, rowHeight,columnWidth);
+                    DrawItemImage(gfx,   cellX, y, columnWidth,rowHeight);
                 }
                 else
                 {
                     // Default drawing for other cells
                     gfx.DrawString(row[i], font, XBrushes.Black, cellRect, XStringFormats.TopCenter);
 
-                    if (isHeader || (i == row.Length - 1 && isLastItem))
+                    //if (isHeader || (i == row.Length - 1 && isLastItem))
+                    if (isHeader ||  isLastItem)
                     {
+                        var bottomMargin = 10;
+                        if(isLastItem){
+                            bottomMargin = (int)rowHeight;
+                        }
                         // Draw the bottom line if it's a header or last item
-                        DrawBottomLine(gfx, x, y, columnWidth, 10);
+                        DrawBottomLine(gfx, x, y, columnWidth, bottomMargin);
                     }
                 }
             }
@@ -67,8 +70,7 @@ namespace PDFGenerator.Helpers
           {
             var imagePath = $"{FolderPath}kilagoo/shoes.png";
             var image = XImage.FromFile(imagePath);
-            double xPosition = x;
-            gfx.DrawImage(image, xPosition, y,columnWidth-10,rowHeight-10);
+            gfx.DrawImage(image, x, y,columnWidth-20,rowHeight-20);
          }
 
 

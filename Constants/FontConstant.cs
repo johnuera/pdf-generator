@@ -12,5 +12,11 @@ namespace PDFGenerator.Constants
 
         public static readonly XFont TableHeaderFont = new XFont("Arial", 8, XFontStyleEx.Bold);
         public static readonly XFont TableCellFont = new XFont("Arial", 7, XFontStyleEx.Regular);
+
+        public static readonly XFont FooterDefaultFont = new XFont("Arial", 7, XFontStyleEx.Regular);
+        public static readonly XFont FooterBoldFont = new XFont("Arial", 7, XFontStyleEx.Bold);
+        public static readonly XFont MessageDefaultFont = new XFont("Arial", 9, XFontStyleEx.Regular);
+        public static readonly XFont MessageBoldFont = new XFont("Arial", 9, XFontStyleEx.Bold);
+
     }
 }
