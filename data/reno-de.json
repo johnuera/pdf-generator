@@ -4,12 +4,12 @@
       "language": "de",
       "invoiceHeadline": "Rechnung / Lieferschein",
       "packingListHeadline": "Lieferschein",
-      "clientName": "kilagoo",
+      "clientName": "RENO",
       "clientStreet": "Industriestr. 41",
       "clientCity": "23879 Mölln",
       "clientTel": "Tel.: 05130/9069061",
-      "clientMail": "kontakt@kilagoo.com",
-      "clientUrl": "www.kilagoo.com"
+      "clientMail": "shop@reno.de",
+      "clientUrl": "www.reno.de"
     },
     "orderText": {
       "customerNumber": "Kundennummer:",
@@ -42,7 +42,7 @@
       "VAT": "MwSt.",
       "from": "aus",
       "netTotal": "Nettobetrag",
-      "thankYou": "Vielen Dank für deine Bestellung bei kilagoo."
+      "thankYou": "Vielen Dank für deine Bestellung bei RENO."
     },
     "paymentText": {
       "method": "Zahlungsart:",
@@ -52,9 +52,9 @@
       "hintPaypal": "Wir haben den Rechnungsbetrag deinem PayPal-Konto belastet.",
       "hintCOD": "Du hast die Ware bei Empfang des Paketes bezahlt.",
       "hintSofortueberweisung": "",
-      "hintPayOne": "Bitte überweise den Rechnungsbetrag anhand der Zahlungsinformationen, die du von PayOne erhalten hast.--kilagoo.com hat die fällige Kaufpreisforderung aus deiner Bestellung, einschließlich etwaiger Nebenforderungen, an die PayOne GmbH abgetreten. Forderungsinhaber ist damit die PayOne GmbH. Eine schuldbefreiende Leistung ist durch dich nur an die PayOne GmbH möglich. Es gelten die zusätzlichen Allgemeinen Geschäftsbedingungen und der Datenschutzhinweis der PayOne GmbH: www.payone.com/agb.--Die Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.",
-      "returnHint": "Du möchtest deine kilagoo Produkte zurückgeben?",
-      "returnText1": "Bitte verwende für die Anmeldung deiner Retoure das Retourenportal auf kilagoo.com",
+      "hintPayOne": "Bitte überweise den Rechnungsbetrag anhand der Zahlungsinformationen, die du von PayOne erhalten hast.--reno.com hat die fällige Kaufpreisforderung aus deiner Bestellung, einschließlich etwaiger Nebenforderungen, an die PayOne GmbH abgetreten. Forderungsinhaber ist damit die PayOne GmbH. Eine schuldbefreiende Leistung ist durch dich nur an die PayOne GmbH möglich. Es gelten die zusätzlichen Allgemeinen Geschäftsbedingungen und der Datenschutzhinweis der PayOne GmbH: www.payone.com/agb.--Die Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.",
+      "returnHint": "Du möchtest deine RENO Produkte zurückgeben?",
+      "returnText1": "Bitte verwende für die Anmeldung deiner Retoure das Retourenportal auf reno.de",
        "returnText2":"und gib dort deine Bestellnummer und die bei der Bestellung verwendete Mailadresse an.",
        "regards": "Liebe Grüße"
     },
@@ -72,14 +72,14 @@
       "reason7": "Defekter Artikel",
       "reason8": "Falscher Artikel geliefert",
       "reason9": "Verspätete Lieferung",
-      "noExchange": "Es war nicht das passende Teil oder die passende Größe dabei? Gib deine neue Bestellung jetzt unter www.kilagoo.com auf.",
+      "noExchange": "Es war nicht das passende Teil oder die passende Größe dabei? Gib deine neue Bestellung jetzt unter www.reno.com auf.",
       "hint1": "Wie gebe ich einen Artikel zurück?--Du kannst innerhalb von 30 Tagen ungetragene Artikel in der Original-Verpackung wie folgt an uns zurücksenden:",
-      "hint2": "1) leg bitte diesen Retourenschein in das Paket-- 2) logge dich bei deinem Kundenkonto auf www.kilagoo.com ein-- 3) wähle den Menüpunkt “Bestellungen“ und führe die Aktion “Rücksendung“ für deine gewünschte Bestellung aus-- 4) folge den weiteren Anweisungen, um einen Artikel kostenfrei an uns zurückzuschicken",
-      "hint3": "Bei Fragen erreichst du uns jederzeit unter kontakt@kilagoo.com oder telefonisch unter: 05130/9069061*--(Mo - Fr 9:00 - 18:00 Uhr) *Gebühren, gemäß deines Telefonvertrages."
+      "hint2": "1) leg bitte diesen Retourenschein in das Paket-- 2) logge dich bei deinem Kundenkonto auf www.reno.com ein-- 3) wähle den Menüpunkt “Bestellungen“ und führe die Aktion “Rücksendung“ für deine gewünschte Bestellung aus-- 4) folge den weiteren Anweisungen, um einen Artikel kostenfrei an uns zurückzuschicken",
+      "hint3": "Bei Fragen erreichst du uns jederzeit unter kontakt@reno.com oder telefonisch unter: 05130/9069061*--(Mo - Fr 9:00 - 18:00 Uhr) *Gebühren, gemäß deines Telefonvertrages."
     },
     "footer": {
       "greeting": "Liebe Grüße",
-      "signature": "dein kilagoo Team",
+      "signature": "dein RENO Team",
       "line1": "Kienast Schuhhandels GmbH & Co. KG",
       "line11": "An der Autobahn 15--30900 Wedemark--Amtsgericht Hannover HRA 200934--USt-IdNr.: DE814939914",
       "line2": "Bankverbindung",

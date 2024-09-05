@@ -1,7 +1,6 @@
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 using static PDFGenerator.Constants.FontConstant;
-using static PDFGenerator.Helpers.TextHelper;
 
 namespace PDFGenerator.Services
 {

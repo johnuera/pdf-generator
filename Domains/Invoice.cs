@@ -1,6 +1,3 @@
-
-using System;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace PDFGenerator.Domains
@@ -69,7 +66,11 @@ namespace PDFGenerator.Domains
         public string? HintSofortueberweisung { get; set; }
         public string? HintPayOne { get; set; }
         public string? ReturnHint { get; set; }
-        public string? ReturnText { get; set; }
+        public string? ReturnText1 { get; set; }
+        public string? ReturnText2 { get; set; }
+        public string? Regards { get; set; }
+
+
     }
 
     public class ReturnText

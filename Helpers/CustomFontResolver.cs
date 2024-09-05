@@ -1,6 +1,4 @@
 using PdfSharpCore.Fonts;
-using System.IO;
-using System.Reflection;
 namespace PDFGenerator.Helpers
 {
     public class CustomFontResolver : IFontResolver

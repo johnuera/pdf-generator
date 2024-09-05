@@ -73,12 +73,34 @@ namespace PDFGenerator.Helpers
         }
 
         private static void DrawItemImage(XGraphics gfx, double x, double y,
-         double columnWidth, double rowHeight)
-          {
+            double columnWidth, double rowHeight)
+        {
             var imagePath = $"{FolderPath}kilagoo/shoes.png";
             var image = XImage.FromFile(imagePath);
-            gfx.DrawImage(image, x, y,columnWidth-20,rowHeight-20);
-         }
+
+            // Calculate the scaling factor to maintain the aspect ratio
+            double imageAspect = image.PixelWidth / (double)image.PixelHeight;
+            double boxAspect = columnWidth / rowHeight;
+
+            double scaledWidth, scaledHeight;
+
+            if (imageAspect > boxAspect)
+            {
+                // Image is wider relative to the box, fit by width
+                scaledWidth = columnWidth - 20;
+                scaledHeight = (columnWidth - 20) / imageAspect;
+            }
+            else
+            {
+                // Image is taller relative to the box, fit by height
+                scaledWidth = (rowHeight - 20) * imageAspect;
+                scaledHeight = rowHeight - 20;
+            }
+
+            // Draw the image at the specified location with the calculated size
+            gfx.DrawImage(image, x, y, scaledWidth, scaledHeight);
+        }
+
 
 
 

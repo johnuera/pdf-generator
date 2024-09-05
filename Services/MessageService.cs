@@ -1,6 +1,3 @@
-
-using static PDFGenerator.Helpers.TextHelper;
-using static PDFGenerator.Helpers.TableHelper;
 using PDFGenerator.Domains;
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
@@ -22,10 +19,10 @@ namespace PDFGenerator.Services
 
         public static void AddReturnMessage(XGraphics gfx, double orderItemsYPosition, Root data)
         {
-            gfx.DrawString(ReturnInstructions[0], MessageBoldFont, XBrushes.Black, 50, orderItemsYPosition + 140);
-            gfx.DrawString(ReturnInstructions[1], MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 150);
-            gfx.DrawString(ReturnInstructions[2], MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 160);
-            gfx.DrawString(ReturnInstructions[3], MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 190);
+            gfx.DrawString(data.PaymentText.ReturnHint, MessageBoldFont, XBrushes.Black, 50, orderItemsYPosition + 140);
+            gfx.DrawString(data.PaymentText.ReturnText1, MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 150);
+            gfx.DrawString(data.PaymentText.ReturnText2, MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 160);
+            gfx.DrawString(data.PaymentText.Regards, MessageDefaultFont, XBrushes.Black, 50, orderItemsYPosition + 190);
 
 
 
@@ -36,14 +33,20 @@ namespace PDFGenerator.Services
             var imagePath = $"{FolderPath}{data.General.ClientName}/qrSpace.png";
             var image = XImage.FromFile(imagePath);
             double xPosition = gfx.PageSize.Width - 190;
-            gfx.DrawImage(image, xPosition, orderItemsYPosition + 120, 140, 65);
+            gfx.DrawImage(image, xPosition, orderItemsYPosition + 120, 120, 75);
+            //For Kilago
+            //gfx.DrawImage(image, xPosition, orderItemsYPosition + 120, 140, 65);
+
         }
 
         public static void AddSignature(XGraphics gfx, double orderItemsYPosition, Root data)
         {
+            if(data.General.ClientName=="kilago"){
             var imagePath = $"{FolderPath}{data.General.ClientName}/signature-kilagoo.png";
             var image = XImage.FromFile(imagePath);
             gfx.DrawImage(image, 50, orderItemsYPosition + 190, 150, 35);
+            }
+
         }
 
     }
