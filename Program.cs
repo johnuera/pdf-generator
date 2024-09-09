@@ -7,20 +7,25 @@ class Program
     static void Main()
     {
 
-        // Get client data from JSON
+        // Get client data from JSON located at data folder
         string filePath = "data/reno-de.json";
-        Root data = JsonReader.ReadJsonFromFile(filePath);
+        Root data = JsonReader.ReadJsonFromFile(filePath); //serialize json to match the Root Object
 
-        //Accessing some properties
+        //Accessing the property
         Console.WriteLine($"Client Name: {data.General.ClientName}");
  
         //Create a PDF document and a page
         using (var document = new PdfDocument())
         {
-            document.Info.Title = "Created with PDFsharp";
+            //add document title
+            document.Info.Title = $"Invoice for {data.General.ClientName}  ";
+            
+            //Create Invoice Page with return value of total orders
             int totalOrders = GenerateInvoice(document,data);
+
+            //create PDF File
             DateTimeOffset now = DateTimeOffset.UtcNow;
-            var name = $"reno-pdf-with-{totalOrders}-items.pdf";
+            var name = $"{data.General.ClientName}-pdf-with-{totalOrders}-items.pdf";
 
             // Save the document
             document.Save(name);

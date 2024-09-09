@@ -24,22 +24,7 @@ namespace PDFGenerator.Constants
             "23879 Mölln",
         };
 
-        public static readonly string[] FooterCompanyInfo =
-        {
-            "Kienast Schuhhandels GmbH & Co. KG",
-            "An der Autobahn 15",
-            "30900 Wedemark",
-            "Amtsgericht Hannover HRA 200934",
-            "USt-IdNr.: DE814939914"
-        };
 
-        public static readonly string[] FooterCompanyDetails =
-        {
-            "Persönlich haftende Gesellschafterin:",
-            "Kienast Verwaltungs GmbH",
-            "Amtsgericht Hannover HRB 202679",
-            "Geschäftsführer: Peter-Phillip Kienast, Marco Klin"
-        };
 
         public static readonly string[] CompanyContacts =
         {

@@ -29,7 +29,7 @@ namespace PDFGenerator.Services
                     double orderItemsYPosition = AddOrderItems(gfx, startIndex: 0, maxItems: totalOrders);
                     AddComputation(gfx, orderItemsYPosition, logoXPosition);
                     AddMessage(gfx, data, orderItemsYPosition);
-                    AddFooter(gfx);
+                    AddFooter(gfx,data);
                 }
             }
             else
@@ -71,7 +71,7 @@ namespace PDFGenerator.Services
                             }
                         }
 
-                        AddFooter(gfx);
+                        AddFooter(gfx,data);
                     }
                 }
 
@@ -90,7 +90,7 @@ namespace PDFGenerator.Services
             {
                 double newLogoXPosition = AddHeader(messageGFX, data, true);
                 AddMessage(messageGFX, data, 230);
-                AddFooter(messageGFX);
+                AddFooter(messageGFX,data);
             }
         }
         static double AddHeader(XGraphics gfx, Root data, bool islastPageWithoutItem)
@@ -103,7 +103,7 @@ namespace PDFGenerator.Services
             AddOrderDetails(gfx, imageXPosition);
             if (!islastPageWithoutItem)
             {
-                AddOrderHeader(gfx, data);
+                AddInvoiceHeadline(gfx, data);
             }
             return imageXPosition;
         }
@@ -115,10 +115,10 @@ namespace PDFGenerator.Services
             AddQRCode(gfx, orderItemsYPosition, data);
             AddSignature(gfx, orderItemsYPosition, data);
         }
-        static void AddFooter(XGraphics gfx)
+        static void AddFooter(XGraphics gfx,Root data)
         {
-            AddLeftFooter(gfx);
-            AddRightFooter(gfx);
+            AddLeftFooter(gfx,data);
+            AddRightFooter(gfx,data);
         }
 
     }

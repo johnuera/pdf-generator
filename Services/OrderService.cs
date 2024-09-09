@@ -17,7 +17,7 @@ namespace PDFGenerator.Services
             DrawTextLines(gfx, OrderDetails, xPosition, yPosition, DefaultFont);
         }
 
-        public static void AddOrderHeader(XGraphics gfx, Root data)
+        public static void AddInvoiceHeadline(XGraphics gfx, Root data)
         {
             gfx.DrawString(data.General.InvoiceHeadline, DefaultFontHeader, XBrushes.Black, 50, 300);
         }

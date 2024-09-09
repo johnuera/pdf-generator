@@ -98,15 +98,9 @@ namespace PDFGenerator.Domains
     {
         public string? Greeting { get; set; }
         public string? Signature { get; set; }
-        public string? Line1 { get; set; }
-        public string? Line11 { get; set; }
-        public string? Line2 { get; set; }
-        public string? Line21 { get; set; }
-        public string? Line22 { get; set; }
-        public string? Line3 { get; set; }
-        public string? Line31 { get; set; }
-        public string? Line5 { get; set; }
-        public string? Line6 { get; set; }
+        public string[]?  Left { get; set; }
+        public string[]?  Right { get; set; }
+
     }
 
     public class Root
