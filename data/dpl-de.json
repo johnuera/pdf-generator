@@ -1,0 +1,92 @@
+{
+    "general": {
+        "client": 31,
+        "country": 81,
+        "language": "de",
+        "clientName": "Distorted People",
+        "clientCode": "dpl",
+        "service": "KUNDENSERVICE",
+        "clientMail": "E-Mail: cs@distortedpeople.com",
+        "clientUrl": "www.distortedpeople.com"
+    },
+    "invoice": {
+        "invoiceAddress": "RECHNUNGSADRESSE",
+        "deliveryAddress": "LIEFERADRESSE",
+        "invoice": "RECHNUNG NR.",
+        "deliveryNote": "LIEFERSCHEIN",
+        "invoiceNumber": "Rechnungsnummer",
+        "invoiceDate": "Rechnungsdatum",
+        "customerNumber": "Kunden ID",
+        "orderDate": "Bestelldatum",
+        "page": "Seite"
+    },
+    "articleTable": {
+        "position": "POS",
+        "articleNo": "PRODUKT ID",
+        "articleName": "ARTIKEL",
+        "color": "FARBE",
+        "size": "GRÖSSE",
+        "quantity": "STÜCK",
+        "returnReason": "RETOURENGRUND",
+        "exchange": "UMTAUSCH",
+        "exchangeYes": "JA",
+        "exchangeNo": "NEIN",
+        "newSize": "NEUE GRÖSSE",
+        "itemPrice": "EINZELPREIS",
+        "linePrice": "GESAMTPREIS",
+        "sum": "ZWISCHENSUMME",
+        "shippingCosts": "VERSANDKOSTEN",
+        "discount": "RABATT",
+        "vat": "MWST.",
+        "invoiceTotal": "GESAMTSUMME"
+    },
+    "invoiceHints": {
+        "invoiceHint1": "VIELEN DANK FÜR DIE ZAHLUNG MIT",
+        "invoiceHint2": "WIR WÜNSCHEN DIR VIEL FREUDE MIT DEINER BESTELLUNG.",
+        "invoiceHint3": "DEIN DISTORTED PEOPLE TEAM",
+        "nextPage": "weiter nächste Seite"
+    },
+    "footer": {
+        "center": [
+            "© 2024 Distorted People GmbH I Alle Rechte vorbehalten",
+            "distortedpeople.com ist ein Angebot der Distorted People GmbH, Lindwurmstraße 122, 80337 München",
+            "Vertreten durch Xaver Singer I Ust-IdNr.: DE268403600"
+        ]
+    },
+    "returnText": {
+        "returnHeadline": "RÜCKSENDEFORMULAR",
+        "returnTitle": "FOLGENDE ARTIKEL MÖCHTE ICH GERNE ZURÜCKSENDEN",
+        "returnReasons": "RETOURENGRÜNDE",
+        "returnHint": "HILF UNS UNSEREN SERVICE ZU VERBESSERN, INDEM DU DEINEN RETOURENGRUND MIT ANGIBST.",
+        "returnReason1": "1. Mehrere Größen zur Auswahl bestellt",
+        "returnReason2": "2. Artikel gefällt nicht",
+        "returnReason3": "3. Artikelbeschreibung stimmt nicht",
+        "returnReason4": "4. Artikel zu gross / zu weit",
+        "returnReason5": "5. Artikel zu klein / zu eng",
+        "returnReason6": "6. Artikel anders als abgebildet",
+        "returnReason7": "7. Artikel nicht wie abgebildet",
+        "returnReason8": "8. Falscher Artikel geliefert",
+        "returnReason9": "9. Verspätete Lieferung",
+        "returnHint1": "SOLLTEST DU FRAGEN HABEN, HILFT DIR GERNE UNSER KUNDENSERVICE WEITER."
+    },
+    "returnPolicy": {
+        "rpHeadline": "RÜCKGABEBEDINGUNGEN",
+        "rp1": "DEINE ZUFRIEDENHEIT STEHT FÜR UNS AN ERSTER STELLE.",
+        "rp2": "SOLLTEST DU EINMAL NICHT MIT DEINER BESTELLUNG ZUFRIEDEN SEIN, KANNST DU DIE BESTELLTE WARE INNERHALB VON 14 TAGEN NACH ERHALT AN UNS ZURÜCKSENDEN, ODER ARTIKEL UMTAUSCHEN, FALLS DEINE GEWÜNSCHTE GRÖSSE VORRÄTIG IST.",
+        "rp3": "WENN DU EINEN ARTIKEL ZURÜCKSENDEN ODER UMTAUSCHEN MÖCHTEST",
+        "rp4": "1. VERMERKE AUF DEM RÜCKSENDESCHEIN DEN ZU RETOURNIERENDEN / UMZUTAUSCHENDEN ARTIKEL--2. LEGE DEN RÜCKSENDESCHEIN IN DAS PAKET UND KLEBE DEN ADRESSAUFKLEBER AUF DAS PAKET--3. GIB DAS PAKET BEI EINER POSTFILIALE INNERHALB VON 14 TAGEN (RÜCKGABEFRIST) AB.--4. WICHTIG DU MUSST DAS RÜCKSENDEPORTO SELBST BEZAHLEN--5. BEI EINEM UMTAUSCH SENDEN WIR DIR DEINEN WUNSCH-ARTIKEL SCHNELLSTMÖGLICH AN DEINE LIEFERADRESSE",
+        "rp5": "BITTE FÜLLE DAS IN JEDER SENDUNG ERHALTENE RETOURENFORMULAR AUS, DAMIT WIR DEINE RETOURE SCHNELLSTMÖGLICH BEARBEITEN KÖNNEN.--NACH BEWILLIGUNG DER RÜCKGABE ERHÄLTST DU EINE EMAIL MIT DER BESTÄTIGUNG, DASS DIR DER BETRAG IN WENIGEN TAGEN GUTGESCHRIEBEN WIRD.--BITTE BEACHTE, DASS DUE GELIEFERTEN WAREN NUR ZUM ZWECKE DER PRÜFUNG – ETWA WIE IM LADENGESCHÄFT ZUR ANPROBE ÜBLICH – GENUTZT WERDEN DÜRFEN UND DASS SIE MIT ORIGINAL-ETIKETT SOWIE DEM IM PAKET BEILIEGENDEN RETOURENSCHEIN ZURÜCKGESANDT WERDEN MÜSSEN.--BEWAHRE UNBEDINGT DEN EINLIEFERUNGSBELEG AUF, BIS DU VON UNS EINE BESTÄTIGUNG ÜBER DEN EINGANG DEINER RETOURE ERHÄLTST. DIESER NACHWEIS BELEGT DAS RÜCKSENDEDATUM SOWIE DIE QUITTUNGSNUMMER DEINER RÜCKGABE.--DU ERHÄLTST DEINEN BETRAG AUF DIESELBE WEISE, WIE DU DEINEN EINKAUF BEZAHLT HAST.--BEI EINER VERSCHLECHTERUNG DER WARE DURCH EINEN WEITERGEHENDEN GEBRAUCH BEHALTEN WIR UNS VOR, EINEN WERTERSATZ ZU VERLANGEN.",
+        "rp6": "DER DISTORTED PEOPLE ONLINESHOP AKZEPTIERT AUSSCHLIESSLICH RÜCKSENDUNGEN VON WAREN, DIE AUCH IM DISTORTED PEOPLE ONLINESHOP ERWORBEN WORDEN SIND. IN EINEM DISTORTED PEOPLE STORE ERWORBENE WAREN RETOURNIERE BITTE IMMER DIREKT IN DEM ENTSPRECHENEDEN GESCHÄFT.",
+        "rp7": "KONTAKTIERE BEI ERHALT EINES FALSCH ZUGESENDETEN ODER FEHLERHAFTEN ARTIKELS BITTE UMGEHEND UNSEREN KUNDENSERVICE!"
+    },
+    "returnLabel": {
+        "important": "WICHTIG:",
+        "returns": "Rücksendungen bitte ausschließlich an:",
+        "returns1": "Distorted People GmbH",
+        "returns2": "c/o fuljoyment AG",
+        "returns3": "Energiestraße 3",
+        "returns4": "23881 Alt Mölln",
+        "returns5": "GERMANY",
+        "sender": "Absender:"
+    }
+}

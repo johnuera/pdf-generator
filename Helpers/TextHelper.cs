@@ -14,6 +14,20 @@ namespace PDFGenerator.Helpers
                 y += 10;
             }
         }
+
+        public static void DrawRightAlignedText(XGraphics gfx, XFont font, string labelText, string valueText,
+        double rightMargin, double yPosition, double logoXPosition)
+        {
+            // Measure the width of the label and value text
+            double valueWidth = gfx.MeasureString(valueText, font).Width;
+
+            // Calculate X positions
+            double valueX = gfx.PageSize.Width - rightMargin - valueWidth;
+
+            // Draw the label and value
+            gfx.DrawString(labelText, font, XBrushes.Black, logoXPosition, yPosition);
+            gfx.DrawString(valueText, font, XBrushes.Black, valueX, yPosition);
+        }
     }
 
 }

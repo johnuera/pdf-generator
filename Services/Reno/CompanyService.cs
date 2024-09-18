@@ -3,7 +3,7 @@ using static PDFGenerator.Constants.FontConstant;
 using static PDFGenerator.Helpers.TextHelper;
 using PDFGenerator.Domains;
 
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class CompanyService
     {

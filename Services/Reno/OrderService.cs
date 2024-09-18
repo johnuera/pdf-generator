@@ -6,7 +6,7 @@ using static PDFGenerator.Helpers.TextHelper;
 using static PDFGenerator.Helpers.TableHelper;
 using PDFGenerator.Domains;
 
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class OrderService
     {

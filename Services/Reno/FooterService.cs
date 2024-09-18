@@ -3,7 +3,7 @@ using static PDFGenerator.Constants.PdfConstant;
 using static PDFGenerator.Constants.FontConstant;
 using PDFGenerator.Domains;
 
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class FooterService{
     

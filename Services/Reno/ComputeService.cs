@@ -2,8 +2,9 @@ using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 using static PDFGenerator.Constants.FontConstant;
 using System.Globalization;
+using PDFGenerator.Helpers;
 
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class ComputeService{
      public static void AddComputation(XGraphics gfx, double orderItemsYPosition, double logoXPosition)
@@ -34,25 +35,13 @@ namespace PDFGenerator.Services
     string totalAmountStr = $"{totalPrice.ToString("F2", de)} €";
 
     // Draw labels and values with right alignment
-    DrawRightAlignedText(gfx, MessageDefaultFont, subtotalText, totalPriceStr, rightMargin, orderItemsYPosition + 30, logoXPosition);
-    DrawRightAlignedText(gfx, MessageDefaultFont, shippingCostText, shippingCostStr, rightMargin, orderItemsYPosition + 40, logoXPosition);
-    DrawRightAlignedText(gfx, MessageDefaultFont, netAmountText, netAmountStr, rightMargin, orderItemsYPosition + 50, logoXPosition);
-    DrawRightAlignedText(gfx, MessageDefaultFont, taxText, taxAmountStr, rightMargin, orderItemsYPosition + 60, logoXPosition);
-    DrawRightAlignedText(gfx, MessageBoldFont, totalAmountText, totalAmountStr, rightMargin, orderItemsYPosition + 70, logoXPosition);
+    TextHelper.DrawRightAlignedText(gfx, MessageDefaultFont, subtotalText, totalPriceStr, rightMargin, orderItemsYPosition + 30, logoXPosition);
+    TextHelper.DrawRightAlignedText(gfx, MessageDefaultFont, shippingCostText, shippingCostStr, rightMargin, orderItemsYPosition + 40, logoXPosition);
+    TextHelper.DrawRightAlignedText(gfx, MessageDefaultFont, netAmountText, netAmountStr, rightMargin, orderItemsYPosition + 50, logoXPosition);
+    TextHelper.DrawRightAlignedText(gfx, MessageDefaultFont, taxText, taxAmountStr, rightMargin, orderItemsYPosition + 60, logoXPosition);
+    TextHelper.DrawRightAlignedText(gfx, MessageBoldFont, totalAmountText, totalAmountStr, rightMargin, orderItemsYPosition + 70, logoXPosition);
 }
-private static void DrawRightAlignedText(XGraphics gfx, XFont font, string labelText, string valueText,
- double rightMargin, double yPosition, double logoXPosition)
-{
-    // Measure the width of the label and value text
-    double valueWidth = gfx.MeasureString(valueText, font).Width;
-
-    // Calculate X positions
-    double valueX = gfx.PageSize.Width - rightMargin - valueWidth;
-
-    // Draw the label and value
-    gfx.DrawString(labelText, font, XBrushes.Black, logoXPosition, yPosition);
-    gfx.DrawString(valueText, font, XBrushes.Black, valueX, yPosition);
-}
+ 
 
 public static  decimal  ComputeTotals(string[,] orders)
     {        

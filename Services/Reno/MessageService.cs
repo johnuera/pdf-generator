@@ -3,7 +3,7 @@ using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 using static PDFGenerator.Constants.FontConstant;
 
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class MessageService
     {

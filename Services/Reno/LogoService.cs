@@ -1,7 +1,7 @@
 using PDFGenerator.Domains;
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class LogoService{
         

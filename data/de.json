@@ -39,7 +39,7 @@
       "discount": "Rabatt",
       "discountName": "Gutschein",
       "total": "Gesamtbetrag",
-      "VAT": "MwSt.",
+      "": "MwSt.",
       "from": "aus",
       "netTotal": "Nettobetrag",
       "thankYou": "Vielen Dank für deine Bestellung bei kilagoo."

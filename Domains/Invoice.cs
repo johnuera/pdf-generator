@@ -9,11 +9,14 @@ namespace PDFGenerator.Domains
         public string? InvoiceHeadline { get; set; }
         public string? PackingListHeadline { get; set; }
         public string? ClientName { get; set; }
+        public string? ClientCode { get; set; }
+
         public string? ClientStreet { get; set; }
         public string? ClientCity { get; set; }
         public string? ClientTel { get; set; }
         public string? ClientMail { get; set; }
         public string? ClientUrl { get; set; }
+        public string? Service { get; set; }
     }
 
     public class OrderText
@@ -75,6 +78,8 @@ namespace PDFGenerator.Domains
 
     public class ReturnText
     {
+        public string? ReturnHeadline { get; set; }
+
         public string? ReceiptHeadline { get; set; }
         public string? ReceiptOrderNo { get; set; }
         public string? ReceiptOrderDate { get; set; }
@@ -100,6 +105,7 @@ namespace PDFGenerator.Domains
         public string? Signature { get; set; }
         public string[]?  Left { get; set; }
         public string[]?  Right { get; set; }
+        public string[]?  Center { get; set; }
 
     }
 

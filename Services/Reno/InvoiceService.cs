@@ -1,19 +1,47 @@
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 using PDFGenerator.Domains;
-using static PDFGenerator.Services.LogoService;
-using static PDFGenerator.Services.CustomerService;
-using static PDFGenerator.Services.CompanyService;
-using static PDFGenerator.Services.OrderService;
-using static PDFGenerator.Services.FooterService;
-using static PDFGenerator.Services.MessageService;
-using static PDFGenerator.Services.ComputeService;
+using static PDFGenerator.Services.Reno.LogoService;
+using static PDFGenerator.Services.Reno.CustomerService;
+using static PDFGenerator.Services.Reno.CompanyService;
+using static PDFGenerator.Services.Reno.OrderService;
+using static PDFGenerator.Services.Reno.FooterService;
+using static PDFGenerator.Services.Reno.MessageService;
+using static PDFGenerator.Services.Reno.ComputeService;
 using PdfSharp.Pdf;
-namespace PDFGenerator.Services
+namespace PDFGenerator.Services.Reno
 {
     public class InvoiceService
     {
 
+        public static void Run()
+        {
+            // Get client data from JSON located at data folder
+            string filePath = "data/reno-de.json";
+            Root data = JsonReader.ReadJsonFromFile(filePath); //serialize json to match the Root Object
+
+            //Accessing the property
+            Console.WriteLine($"Client Name: {data.General.ClientName}");
+
+            //Create a PDF document and a page
+            using (var document = new PdfDocument())
+            {
+                //add document title
+                document.Info.Title = $"Invoice for {data.General.ClientName}  ";
+
+                //Create Invoice Page with return value of total orders
+                int totalOrders = GenerateInvoice(document, data);
+
+                //create PDF File
+                DateTimeOffset now = DateTimeOffset.UtcNow;
+                var name = $"{data.General.ClientName}-pdf-with-{totalOrders}-items.pdf";
+
+                // Save the document
+                document.Save(name);
+                Console.WriteLine($"PDF file saved to: {name}");
+            }
+
+        }
         public static int GenerateInvoice(PdfDocument document, Root data)
         {
 
@@ -29,7 +57,7 @@ namespace PDFGenerator.Services
                     double orderItemsYPosition = AddOrderItems(gfx, startIndex: 0, maxItems: totalOrders);
                     AddComputation(gfx, orderItemsYPosition, logoXPosition);
                     AddMessage(gfx, data, orderItemsYPosition);
-                    AddFooter(gfx,data);
+                    AddFooter(gfx, data);
                 }
             }
             else
@@ -71,7 +99,7 @@ namespace PDFGenerator.Services
                             }
                         }
 
-                        AddFooter(gfx,data);
+                        AddFooter(gfx, data);
                     }
                 }
 
@@ -90,7 +118,7 @@ namespace PDFGenerator.Services
             {
                 double newLogoXPosition = AddHeader(messageGFX, data, true);
                 AddMessage(messageGFX, data, 230);
-                AddFooter(messageGFX,data);
+                AddFooter(messageGFX, data);
             }
         }
         static double AddHeader(XGraphics gfx, Root data, bool islastPageWithoutItem)
@@ -115,10 +143,10 @@ namespace PDFGenerator.Services
             AddQRCode(gfx, orderItemsYPosition, data);
             AddSignature(gfx, orderItemsYPosition, data);
         }
-        static void AddFooter(XGraphics gfx,Root data)
+        static void AddFooter(XGraphics gfx, Root data)
         {
-            AddLeftFooter(gfx,data);
-            AddRightFooter(gfx,data);
+            AddLeftFooter(gfx, data);
+            AddRightFooter(gfx, data);
         }
 
     }
