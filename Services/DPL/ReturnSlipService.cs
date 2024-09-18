@@ -1,7 +1,7 @@
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 using PDFGenerator.Domains;
- 
+
 using PdfSharp.Pdf;
 namespace PDFGenerator.Services.DPL
 {
@@ -24,7 +24,7 @@ namespace PDFGenerator.Services.DPL
                 document.Info.Title = $"Return Slip for {data.General.ClientName}  ";
 
                 //Create Invoice Page with return value of total orders
-                 GenerateReturnSlip(document, data);
+                GenerateReturnSlip(document, data);
 
                 //create PDF File
                 DateTimeOffset now = DateTimeOffset.UtcNow;
@@ -40,16 +40,19 @@ namespace PDFGenerator.Services.DPL
         private static void GenerateReturnSlip(PdfDocument document, Root data)
         {
             var page = document.AddPage();
-                page.Size = PdfSharp.PageSize.A4;
-                using (var gfx = XGraphics.FromPdfPage(page))
-                {
-                       LogoService.AddLogo(gfx,data);
-                       HeaderService.AddHeader(gfx,data);
-                       HeaderService.AddMessage(gfx,data);
-                       FooterService.AddCenterFooter(gfx,data);
-                }
+            page.Size = PdfSharp.PageSize.A4;
+            using (var gfx = XGraphics.FromPdfPage(page))
+            {
+                LogoService.AddLogo(gfx, data);
+                HeaderService.AddHeader(gfx, data);
+                HeaderService.AddMessage(gfx, data);
+                FooterService.AddCenterFooter(gfx, data);
+                CustomerService.AddCustomerAddress(gfx, data);
+                CustomerService.AddOrderDetails(gfx, data);
+
             }
-         
         }
+
     }
+}
 
