@@ -3,7 +3,7 @@ using static PDFGenerator.Constants.PdfConstant;
 using static PDFGenerator.Constants.FontConstant;
 
 using static PDFGenerator.Helpers.TextHelper;
-using static PDFGenerator.Helpers.TableHelper;
+using static PDFGenerator.Helpers.Reno.TableHelper;
 using PDFGenerator.Domains;
 
 namespace PDFGenerator.Services.Reno

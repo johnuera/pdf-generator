@@ -1,7 +1,7 @@
 using PdfSharp.Drawing;
 using static PDFGenerator.Constants.PdfConstant;
 
-namespace PDFGenerator.Helpers
+namespace PDFGenerator.Helpers.Reno
 {
     public class TableHelper
     {

@@ -49,7 +49,10 @@ namespace PDFGenerator.Services.DPL
                 FooterService.AddCenterFooter(gfx, data);
                 CustomerService.AddCustomerAddress(gfx, data);
                 CustomerService.AddOrderDetails(gfx, data);
-
+                HeaderService.AddReturnTitle(gfx, data);
+                var returnItemYPosition = ReturnService.AddReturnItems(gfx,data,0,8,315);
+                ReturnService.AddReturnReason(gfx,data,returnItemYPosition);
+                MessageService.AddReturnMessage(gfx,returnItemYPosition,data);
             }
         }
 

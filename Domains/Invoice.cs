@@ -17,6 +17,7 @@ namespace PDFGenerator.Domains
         public string? ClientMail { get; set; }
         public string? ClientUrl { get; set; }
         public string? Service { get; set; }
+        public string? ClientSignature { get; set; }
     }
 
     public class OrderText
@@ -33,7 +34,7 @@ namespace PDFGenerator.Domains
     {
         public string? HeaderPos { get; set; }
         public string? HeaderNo { get; set; }
-        public string? HeaderImage { get; set; }
+        public string? HeaderName { get; set; }
         public string? HeaderDescription { get; set; }
         public string? HeaderColor { get; set; }
         public string? HeaderSize { get; set; }
@@ -41,6 +42,12 @@ namespace PDFGenerator.Domains
         public string? HeaderPrice { get; set; }
         public string? HeaderTotal { get; set; }
         public string? HeaderReasonForReturn { get; set; }
+        public string? HeaderExchange  { get; set; }
+        public string? ExchangeYes  { get; set; }
+        public string? ExchangeNo  { get; set; }
+        public string? HeaderNewSize  { get; set; }
+
+
     }
 
     public class InvoiceDetails
@@ -79,6 +86,7 @@ namespace PDFGenerator.Domains
     public class ReturnText
     {
         public string? ReturnHeadline { get; set; }
+        public string? ReturnTitle { get; set; }
 
         public string? ReceiptHeadline { get; set; }
         public string? ReceiptOrderNo { get; set; }
@@ -97,6 +105,7 @@ namespace PDFGenerator.Domains
         public string? Hint1 { get; set; }
         public string? Hint2 { get; set; }
         public string? Hint3 { get; set; }
+        public string[]? ReturnHint{get;set;}
     }
 
     public class Footer

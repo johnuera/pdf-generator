@@ -7,7 +7,9 @@
         "clientCode": "dpl",
         "service": "KUNDENSERVICE",
         "clientMail": "E-Mail: cs@distortedpeople.com",
-        "clientUrl": "www.distortedpeople.com"
+        "clientUrl": "www.distortedpeople.com",
+        "clientSignature":"DEIN DISTORTED PEOPLE TEAM"
+
     },
     "invoice": {
         "invoiceAddress": "RECHNUNGSADRESSE",
@@ -21,17 +23,17 @@
         "page": "Seite"
     },
     "articleTable": {
-        "position": "POS",
-        "articleNo": "PRODUKT ID",
-        "articleName": "ARTIKEL",
-        "color": "FARBE",
-        "size": "GRÖSSE",
-        "quantity": "STÜCK",
-        "returnReason": "RETOURENGRUND",
-        "exchange": "UMTAUSCH",
+        "headerPos": "POS",
+        "headerNo": "PRODUKT ID",
+        "headerName": "ARTIKEL",
+        "headerColor": "FARBE",
+        "headerSize": "GRÖSSE",
+        "headerQuantity": "STÜCK",
+        "headerReasonForReturn": "RETOURENGRUND",
+        "headerExchange": "UMTAUSCH",
         "exchangeYes": "JA",
         "exchangeNo": "NEIN",
-        "newSize": "NEUE GRÖSSE",
+        "headerNewSize": "NEUE GRÖSSE",
         "itemPrice": "EINZELPREIS",
         "linePrice": "GESAMTPREIS",
         "sum": "ZWISCHENSUMME",
@@ -57,17 +59,21 @@
         "returnHeadline": "RÜCKSENDEFORMULAR",
         "returnTitle": "FOLGENDE ARTIKEL MÖCHTE ICH GERNE ZURÜCKSENDEN",
         "returnReasons": "RETOURENGRÜNDE",
-        "returnHint": "HILF UNS UNSEREN SERVICE ZU VERBESSERN, INDEM DU DEINEN RETOURENGRUND MIT ANGIBST.",
-        "returnReason1": "1. Mehrere Größen zur Auswahl bestellt",
-        "returnReason2": "2. Artikel gefällt nicht",
-        "returnReason3": "3. Artikelbeschreibung stimmt nicht",
-        "returnReason4": "4. Artikel zu gross / zu weit",
-        "returnReason5": "5. Artikel zu klein / zu eng",
-        "returnReason6": "6. Artikel anders als abgebildet",
-        "returnReason7": "7. Artikel nicht wie abgebildet",
-        "returnReason8": "8. Falscher Artikel geliefert",
-        "returnReason9": "9. Verspätete Lieferung",
-        "returnHint1": "SOLLTEST DU FRAGEN HABEN, HILFT DIR GERNE UNSER KUNDENSERVICE WEITER."
+        "returnHint": [
+            "HILF UNS UNSEREN SERVICE ZU",
+            "VERBESSERN, INDEM DU DEINEN",
+            "RETOURENGRUND MIT ANGIBST."
+        ],
+        "reason1": "1 = MEHRERE GRÖSSEN ZUR AUSWAHL BESTELLT",
+        "reason2": "2 = ARTIKEL GEFÄLLT NICHT",
+        "reason3": "3 = ARTIKELBESCHREIBUNG STIMMT NICHT",
+        "reason4": "4 = ARTIKEL ZU GROSS / ZU WEIT",
+        "reason5": "5 = ARTIKEL ZU KLEIN / ZU ENG",
+        "reason6": "6 = ARTIKEL IST BESCHÄDIGT",
+        "reason7": "7 = ARTIKEL NICHT WIE ABGEBILDET",
+        "reason8": "8 = FALSCHER ARTIKEL GELIEFERT",
+        "reason9": "9 = VERSPÄTETE LIEFERUNG",
+        "hint1": "SOLLTEST DU FRAGEN HABEN, HILFT DIR GERNE UNSER KUNDENSERVICE WEITER."
     },
     "returnPolicy": {
         "rpHeadline": "RÜCKGABEBEDINGUNGEN",

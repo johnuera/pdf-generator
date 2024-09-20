@@ -19,5 +19,11 @@ namespace PDFGenerator.Constants
         public static readonly XFont SmallDefaultFont = new XFont("Arial", 6, XFontStyleEx.Regular);
         public static readonly XFont SmallBoldFont = new XFont("Arial", 7, XFontStyleEx.Bold);
 
+                public static readonly XFont MediumBoldFont = new XFont("Arial", 8, XFontStyleEx.Bold);
+        public static readonly XFont ReturnTableCellFont = new XFont("Arial", 6, XFontStyleEx.Regular);
+        public static readonly XFont ReturnTableCellBoldFont = new XFont("Arial", 6, XFontStyleEx.Bold);
+
+
+        public static readonly XFont ReturnMessageFont = new XFont("Arial", 7, XFontStyleEx.Regular);
     }
 }

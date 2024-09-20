@@ -43,6 +43,8 @@ namespace PDFGenerator.Constants
 
         public static readonly string DeliveryNote = "Rechnung / Lieferschein";
         public static readonly string[] OrderHeaders = { "Pos", "Artikelnummer", "Artikel", "Bezeichnung", "Menge", "Preis", "Summe" };
+        public static readonly string[] ReturnHeaders = { "Pos", "Artikelnummer", "Artikel", "Bezeichnung", "Menge", "Preis", "Summe" };
+
         public static readonly string[] ReturnInstructions =
         {
                 "Du möchtest deine kilagoo Produkte zurückgeben?",
@@ -51,6 +53,14 @@ namespace PDFGenerator.Constants
                 "Liebe Grüße"
             };
 
+
+        public static readonly string[,] ReturnItems = {
+            {"1", "CLASSIC PREMIUM Shoes", "2475", "NAVY / GOLD", "M","","","",""},
+                        {"1", "CLASSIC PREMIUM", "2475", "NAVY / GOLD", "M","","","",""},
+
+            {"1", "CLASSIC PREMIUM", "2475", "NAVY / GOLD", "M","","","",""}
+
+            };
         public static readonly string[,] OrderItems =
 {
     { "1", "100-234567", "Summer Dress", "Lightweight Cotton Dress | Size: M | Color: Floral", "1", "50,00 €", "50,00 €" },
