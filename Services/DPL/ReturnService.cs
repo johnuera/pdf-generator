@@ -41,7 +41,7 @@ namespace PDFGenerator.Services.DPL
                 if (orderIndex >= ReturnItems.GetLength(0))
                     break;
 
-                bool isLastItem = orderIndex == ReturnItems.GetLength(0) - 1;
+                bool isLastItem = i == maxItems-1;
                 DrawRow(gfx, GetRow(ReturnItems, orderIndex), tableX, currentY, columnWidth,
                     20, ReturnTableCellFont, false, isLastItem, data);
                 currentY += 20;

@@ -40,5 +40,17 @@ namespace PDFGenerator.Services.DPL
         }
 
 
+                public static void AddBarcode(XGraphics gfx, Root data)
+        {
+          
+                var barCode = BarcodeHelper.CreateBarcode("B12691531",120, 30);
+                if(barCode!=null){
+                        var xPosition = gfx.PageSize.Width - barCode.Size.Width-55.5;
+                         gfx.DrawBarCode(barCode, XBrushes.Black,new XPoint(xPosition,180));
+
+                }
+
+
+        }
     }
 }

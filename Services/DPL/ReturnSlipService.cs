@@ -24,11 +24,11 @@ namespace PDFGenerator.Services.DPL
                 document.Info.Title = $"Return Slip for {data.General.ClientName}  ";
 
                 //Create Invoice Page with return value of total orders
-                GenerateReturnSlip(document, data);
+                int totalItems = GenerateMultipleReturnSlip(document, data);
 
                 //create PDF File
                 DateTimeOffset now = DateTimeOffset.UtcNow;
-                var name = $"{data.General.ClientCode}-pdf-with-items.pdf";
+                var name = $"{data.General.ClientCode}-pdf-with-{totalItems}-items.pdf";
 
                 // Save the document
                 document.Save(name);
@@ -36,6 +36,67 @@ namespace PDFGenerator.Services.DPL
             }
 
         }
+
+
+        private static int GenerateMultipleReturnSlip(PdfDocument document, Root data)
+        {
+            int totalOrders = ReturnItems.GetLength(0);
+            if (totalOrders <= 10)
+            {
+                var page = document.AddPage();
+                page.Size = PdfSharp.PageSize.A4;
+                using (var gfx = XGraphics.FromPdfPage(page))
+                {
+                    LogoService.AddLogo(gfx, data);
+                    HeaderService.AddHeader(gfx, data);
+                    HeaderService.AddMessage(gfx, data);
+                    FooterService.AddCenterFooter(gfx, data);
+                    CustomerService.AddCustomerAddress(gfx, data);
+                    CustomerService.AddOrderDetails(gfx, data);
+                    CustomerService.AddBarcode(gfx, data);
+
+                    HeaderService.AddReturnTitle(gfx, data);
+                    var returnItemYPosition = ReturnService.AddReturnItems(gfx, data, 0, totalOrders, 315);
+                    ReturnService.AddReturnReason(gfx, data, returnItemYPosition);
+                    MessageService.AddReturnMessage(gfx, returnItemYPosition, data);
+                }
+            }
+            else
+            {
+                int ordersPerPage = 10;
+                int numberOfPages = (int)Math.Ceiling((double)totalOrders / ordersPerPage);
+
+                for (int i = 0; i < numberOfPages; i++)
+                {
+                    var page = document.AddPage();
+                    page.Size = PdfSharp.PageSize.A4;
+
+                    using (var gfx = XGraphics.FromPdfPage(page))
+                    {
+                        int startIndex = i * ordersPerPage;
+                        int maxItems = Math.Min(ordersPerPage, totalOrders - startIndex);
+                        // Add header and logo
+                        LogoService.AddLogo(gfx, data);
+                        HeaderService.AddHeader(gfx, data);
+                        HeaderService.AddMessage(gfx, data);
+                        FooterService.AddCenterFooter(gfx, data);
+                        CustomerService.AddCustomerAddress(gfx, data);
+                        CustomerService.AddOrderDetails(gfx, data);
+                        CustomerService.AddBarcode(gfx, data);
+
+                        HeaderService.AddReturnTitle(gfx, data);
+                        var returnItemYPosition = ReturnService.AddReturnItems(gfx, data, startIndex, maxItems, 315);
+                        ReturnService.AddReturnReason(gfx, data, returnItemYPosition);
+                        MessageService.AddReturnMessage(gfx, returnItemYPosition, data);
+                    }
+                }
+
+
+
+            }
+            return totalOrders;
+        }
+
 
         private static void GenerateReturnSlip(PdfDocument document, Root data)
         {
@@ -50,9 +111,9 @@ namespace PDFGenerator.Services.DPL
                 CustomerService.AddCustomerAddress(gfx, data);
                 CustomerService.AddOrderDetails(gfx, data);
                 HeaderService.AddReturnTitle(gfx, data);
-                var returnItemYPosition = ReturnService.AddReturnItems(gfx,data,0,8,315);
-                ReturnService.AddReturnReason(gfx,data,returnItemYPosition);
-                MessageService.AddReturnMessage(gfx,returnItemYPosition,data);
+                var returnItemYPosition = ReturnService.AddReturnItems(gfx, data, 0, 8, 315);
+                ReturnService.AddReturnReason(gfx, data, returnItemYPosition);
+                MessageService.AddReturnMessage(gfx, returnItemYPosition, data);
             }
         }
 
