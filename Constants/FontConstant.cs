@@ -6,6 +6,7 @@ namespace PDFGenerator.Constants
     {
 
         public static readonly XFont DefaultFont = new XFont("Arial", 9, XFontStyleEx.Regular);
+        public static readonly XFont DefaultFontUnderlined = new XFont("Arial", 9, XFontStyleEx.Underline);
         public static readonly XFont DefaultFontHeader = new XFont("Arial", 14, XFontStyleEx.Regular);
         public static readonly XFont FontHeaderBold = new XFont("Arial", 13, XFontStyleEx.Bold);
 

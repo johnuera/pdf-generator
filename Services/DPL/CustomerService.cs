@@ -8,47 +8,57 @@ namespace PDFGenerator.Services.DPL
 {
     public class CustomerService
     {
-
-        public static void AddCustomerAddress(XGraphics gfx, Root data)
+        public static void AddCustomerAddress(XGraphics gfx, Root data,double startY = 183.5)
         {
-
-            gfx.DrawString("RECHNUNGSADRESSE:", SmallBoldFont, XBrushes.Black, 55.3, 183.5);
-            gfx.DrawString("Vor- und Nachname", SmallBoldFont, XBrushes.Black, 55.3, 195);
-            gfx.DrawString("Straße", SmallBoldFont, XBrushes.Black, 55.3, 203);
-            gfx.DrawString("Postleitzahl Stadt", SmallBoldFont, XBrushes.Black, 55.3, 211);
-            gfx.DrawString("Land", SmallBoldFont, XBrushes.Black, 55.3, 219);
-
+            DrawText(gfx, "RECHNUNGSADRESSE:", 55.3, startY);
+            DrawText(gfx, "Vor- und Nachname", 55.3, startY + 11.5);
+            DrawText(gfx, "Straße", 55.3, startY + 19.5);
+            DrawText(gfx, "Postleitzahl Stadt", 55.3, startY + 27.5);
+            DrawText(gfx, "Land", 55.3, startY + 35.5);
         }
 
-        public static void AddOrderDetails(XGraphics gfx, Root data)
+        public static void AddInvoiceAddress(XGraphics gfx, Root data,double startY = 183.5)
         {
-            var xPosition = 246;
+             DrawText(gfx, "LIEFEADRESSE:", 200, startY);
+            DrawText(gfx, "Vor- und Nachname", 200, startY + 11.5);
+            DrawText(gfx, "Straße", 200, startY + 19.5);
+            DrawText(gfx, "Postleitzahl Stadt", 200, startY + 27.5);
+            DrawText(gfx, "Land", 200, startY + 35.5);
+        }
 
-            gfx.DrawString("Bestelldatum:", SmallBoldFont, XBrushes.Black, xPosition, 183.5);
-            gfx.DrawString("00.00.2024", SmallBoldFont, XBrushes.Black, xPosition + 80, 183.5);
+        public static void AddOrderDetails(XGraphics gfx, Root data, double xPosition = 246,double startY = 183.5)
+        {
+            double xValueOffset = 80;
+            TextHelper.DrawRightAlignedLabelAndValue(gfx, FooterDefaultFont, "Bestelldatum:", "00.00.2024", 63, startY, 150);
+            TextHelper.DrawRightAlignedLabelAndValue(gfx, FooterDefaultFont, "Rechnungsnummer:", "000000", 63, startY + 11.5, 0);
 
-            gfx.DrawString("Rechnungsnummer:", SmallBoldFont, XBrushes.Black, xPosition, 195);
-            gfx.DrawString("000000", SmallBoldFont, XBrushes.Black, xPosition + 80, 195);
+            DrawText(gfx, "Rechnungsnummer:", xPosition, startY + 11.5);
+            DrawText(gfx, "000000", xPosition + xValueOffset, startY + 11.5);
 
-            gfx.DrawString("Kunden ID:", SmallBoldFont, XBrushes.Black, xPosition, 203);
-            gfx.DrawString("00000", SmallBoldFont, XBrushes.Black, xPosition + 80, 203);
+            DrawText(gfx, "Kunden ID:", xPosition, startY + 19.5);
+            DrawText(gfx, "00000", xPosition + xValueOffset, startY + 19.5);
 
-            gfx.DrawString("Rechnungsdatum:", SmallBoldFont, XBrushes.Black, xPosition, 211);
-            gfx.DrawString("00.00.2024", SmallBoldFont, XBrushes.Black, xPosition + 80, 211);
+            DrawText(gfx, "Rechnungsdatum:", xPosition, startY + 27.5);
+            DrawText(gfx, "00.00.2024", xPosition + xValueOffset, startY + 27.5);
+        }
 
-
+        private static void DrawText(XGraphics gfx, string text, double xPosition, double yPosition)
+        {
+            gfx.DrawString(text, SmallBoldFont, XBrushes.Black, xPosition, yPosition);
         }
 
 
-                public static void AddBarcode(XGraphics gfx, Root data)
-        {
-          
-                var barCode = BarcodeHelper.CreateBarcode("B12691531",120, 30);
-                if(barCode!=null){
-                        var xPosition = gfx.PageSize.Width - barCode.Size.Width-55.5;
-                         gfx.DrawBarCode(barCode, XBrushes.Black,new XPoint(xPosition,180));
 
-                }
+        public static void AddBarcode(XGraphics gfx, Root data,double startY = 183.5)
+        {
+
+            var barCode = BarcodeHelper.CreateBarcode("B12691531", 120, 30);
+            if (barCode != null)
+            {
+                var xPosition = gfx.PageSize.Width - barCode.Size.Width - 55.5;
+                gfx.DrawBarCode(barCode, XBrushes.Black, new XPoint(xPosition, startY));
+
+            }
 
 
         }

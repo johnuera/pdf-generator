@@ -3,13 +3,14 @@
         "client": 31,
         "country": 81,
         "language": "de",
-        "clientName": "Distorted People",
+        "clientName": "Distorted People GmbH",
         "clientCode": "dpl",
         "service": "KUNDENSERVICE",
         "clientMail": "E-Mail: cs@distortedpeople.com",
         "clientUrl": "www.distortedpeople.com",
-        "clientSignature":"DEIN DISTORTED PEOPLE TEAM"
-
+        "clientSignature":"DEIN DISTORTED PEOPLE TEAM",
+        "clientStreet": "Lindwurmstr. 122",
+        "clientCity": "80337 München"
     },
     "invoice": {
         "invoiceAddress": "RECHNUNGSADRESSE",
